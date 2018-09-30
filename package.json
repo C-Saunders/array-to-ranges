@@ -1,0 +1,24 @@
+{
+  "name": "array-to-ranges",
+  "version": "0.1.0",
+  "description": "Creates range objects from an sorted array and predicate.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "test": "tsc && ava"
+  },
+  "keywords": [
+    "array",
+    "range",
+    "utility"
+  ],
+  "author": "Charlie Saunders<charlieasaunders@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "1.0.0-beta.8",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
+  }
+}
