@@ -1,7 +1,7 @@
 import test from 'ava';
-import { arrayToRanges } from '../dist/index'
+import { arrayToRanges } from '../dist/index';
 
-const countingUp = (current, next) => next - current === 1 || next - current === 0
+const countingUp = (current, next) => next - current === 1 || next - current === 0;
 
 test('empty input', t => {
   t.throws(() => arrayToRanges([], countingUp));
