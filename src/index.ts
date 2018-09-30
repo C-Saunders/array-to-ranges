@@ -16,13 +16,6 @@ function arrayToRanges<T>(values: Array<T>, predicate: EndRangePredicate<T>): Ar
     throw new Error('Empty input');
   }
 
-  if (values.length === 1) {
-    return [{
-      start: values[0],
-      end: values[0],
-    }];
-  }
-
   const result: Array<Range<T>> = [];
   let rangeStartIndex;
   let rangeEndIndex;
