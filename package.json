@@ -15,6 +15,10 @@
   ],
   "author": "Charlie Saunders<charlieasaunders@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/C-Saunders/array-to-ranges"
+  },
   "dependencies": {},
   "devDependencies": {
     "ava": "1.0.0-beta.8",
