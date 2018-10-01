@@ -11,9 +11,9 @@ interface Range<T> {
 
 type EndRangePredicate<T> = (current: T, next: T) => boolean;
 
-function arrayToRanges<T>(values: Array<T>, predicate: EndRangePredicate<T>): Array<Range<T>> {
+function arrayToRanges<T>(values: Array<T>, predicate: EndRangePredicate<T>): Array<Range<T>> | Array<T> {
   if (values.length === 0) {
-    throw new Error('Empty input');
+    return values
   }
 
   const result: Array<Range<T>> = [];
