@@ -29,7 +29,7 @@ require('assert').deepEqual(
 );
 ```
 
-It also works with more complex values:
+It works with more complex values:
 ```ts
 const objectCountDown = (current, next) => current.a - next.a === 0 || current.a - next.a === 1;
 
@@ -62,6 +62,45 @@ require('assert').deepEqual(arrayToRanges([
     },
   }]
 );
+```
+
+And fancy stuff:
+```ts
+import * as moment from 'moment';
+import { arrayToRanges } from 'array-to-ranges';
+import * as assert from 'assert';
+
+const values = [
+  moment('2018-09-01'),
+  moment('2018-09-02'),
+  moment('2018-09-03'),
+  moment('2018-09-04'),
+  moment('2018-09-07'),
+  moment('2018-09-08'),
+  moment('2018-09-08'),
+  moment('2018-09-09'),
+  moment('2018-09-19'),
+];
+
+const result = arrayToRanges(
+  values,
+  (curr: moment.Moment, next: moment.Moment) => curr.isSame(next) || curr.diff(next, 'days') === -1,
+);
+
+assert.deepEqual(result, [
+  {
+    start: moment('2018-09-01'),
+    end: moment('2018-09-04'),
+  },
+  {
+    start: moment('2018-09-07'),
+    end: moment('2018-09-09'),
+  },
+  {
+    start: moment('2018-09-19'),
+    end: moment('2018-09-19'),
+  }
+]);
 ```
 
 ## Contributing

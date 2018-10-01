@@ -2,7 +2,7 @@
   "name": "array-to-ranges",
   "version": "0.1.0",
   "description": "Creates range objects from an sorted array and predicate.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "compile": "tsc",
     "lint": "tslint -p tsconfig.json",
