@@ -1,6 +1,6 @@
 {
   "name": "array-to-ranges",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Creates range objects from an sorted array and predicate.",
   "main": "dist/index.js",
   "scripts": {
