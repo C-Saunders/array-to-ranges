@@ -4,7 +4,7 @@ import { arrayToRanges } from '../dist/index';
 const countingUp = (current, next) => next - current === 1 || next - current === 0;
 
 test('empty input', t => {
-  t.throws(() => arrayToRanges([], countingUp));
+  t.deepEqual(arrayToRanges([], countingUp), []);
 });
 
 test('single item', t => {

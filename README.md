@@ -12,7 +12,8 @@ interface Range<T> {
 // Return true if the next value *should be included* in the range
 type EndRangePredicate<T> = (current: T, next: T) => boolean;
 
-function arrayToRanges<T>(values: Array<T>, predicate: EndRangePredicate<T>): Array<Range<T>>
+// Returns an array of Ranges, or the original array if it's empty
+function arrayToRanges<T>(values: Array<T>, predicate: EndRangePredicate<T>): Array<Range<T>> | Array<T>
 ```
 
 ## Usage
